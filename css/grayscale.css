@@ -125,7 +125,7 @@ a:hover {
   padding: 200px 0;
   text-align: center;
   color: white;
-  background: url("../img/intro-bg.jpg") no-repeat bottom center scroll;
+  background: url("../img/pic_3.jpg") no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -183,7 +183,7 @@ a:hover {
 
 .download-section {
   color: white;
-  background: url("../img/downloads-pic_1.jpg") no-repeat center center scroll;
+  background: url("../img/pic_2.jpg") no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
