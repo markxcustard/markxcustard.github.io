@@ -321,6 +321,7 @@ ul {
   opacity: 0.8; /* Hover effect for better user interaction */
 }
 
+/* Ensuring the overlay is effective */
 .intro-body::before {
   content: "";
   position: absolute;
@@ -328,39 +329,40 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+  background: rgba(0, 0, 0, 0.8); /* Increased the darkness for better text visibility */
   z-index: 1;
 }
 
-.intro-text, h1 {
-  color: #808080; /* Medium grey color; adjust as needed */
-  text-shadow: 1px 1px 2px #808080; /* White shadow for a slight glow effect */
+/* Adjusting header and text styling */
+h1, .intro-text {
+  color: #ffffff; /* Bright white color for maximum contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Darker shadow for better legibility */
+  position: relative; /* Ensure text is above the overlay */
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 4.5vw; /* Adjust if necessary for smaller devices */
   font-weight: bold;
+  margin-bottom: 0.5em; /* Add space between the headline and subtext */
 }
 
 .intro-text {
-  font-size: 1.2em;
+  font-size: 1.5vw; /* Adjust if necessary for smaller devices */
+  padding: 0 15px; /* Padding might help contain text nicely within a specific area */
 }
 
-
+/* Button enhancements */
 .btn-circle {
-  background-color: #ffffff; /* Makes the button solid white */
-  color: #333; /* Dark text color for contrast */
-  border: none; /* Removes any default border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better visibility */
+  font-size: 1.5em; /* Make icon larger for better visibility */
+  width: 60px; /* Adjust based on design preference */
+  height: 60px; /* Adjust based on design preference */
+  line-height: 60px; /* Center icon vertically */
+  color: #333; /* Dark text for contrast */
+  background-color: #fff; /* Solid white for visibility */
+  border-radius: 50%;
+  border: none;
 }
 
 .btn-circle:hover {
-  background-color: #f8f8f8; /* Light gray background on hover for feedback */
-}
-h1 {
-  font-size: 4.5vw;
-}
-
-.intro-text {
-  font-size: 1.5vw;
+  background-color: #e9ecef; /* Light grey background on hover for interactive feedback */
 }
