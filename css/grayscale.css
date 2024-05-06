@@ -334,7 +334,7 @@ ul {
 
 .intro-text, h1 {
   color: #808080; /* Medium grey color; adjust as needed */
-  text-shadow: 1px 1px 2px #fff; /* White shadow for a slight glow effect */
+  text-shadow: 1px 1px 2px #808080; /* White shadow for a slight glow effect */
 }
 
 h1 {
