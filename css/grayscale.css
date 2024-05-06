@@ -279,3 +279,78 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+
+.portfolio-item {
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;  /* Light background to set the section apart */
+  padding: 20px;  /* Padding for better spacing */
+  border-radius: 10px;  /* Optional rounded corners for a modern look */
+}
+
+.portfolio-item h3, .portfolio-item h4 {
+  color: #2c3e50;  /* Dark blue for better contrast */
+}
+
+.portfolio-item p, .portfolio-item li {
+  font-size: 16px;
+  line-height: 1.5;
+  text-indent: 0;  /* No indent for better modern aesthetics */
+  margin-left: 20px;  /* Indent list items for clarity */
+}
+
+ul {
+  list-style-type: disc;  /* Ensure bullet points are visible */
+}
+
+.social-links a {
+  margin-right: 10px; /* Spacing between buttons */
+}
+
+.social-links i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.btn {
+  color: #fff; /* Adjust the color to fit your design */
+  background-color: #007bff; /* Example blue color for buttons */
+  border-color: #007bff; /* Border color if needed */
+}
+
+.btn:hover {
+  opacity: 0.8; /* Hover effect for better user interaction */
+}
+
+.intro-text, h1, h2, p {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.intro-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as necessary */
+  z-index: 1;
+}
+
+.intro-body {
+  position: relative;
+  z-index: 2; /* Ensure this is higher than the overlay */
+}
+
+.intro-text, h1, h2, p {
+  font-weight: bold; /* or use 600/700 depending on the font */
+}
+
+.intro-text, h1, h2, p {
+  font-weight: bold; /* or use 600/700 depending on the font */
+}
+
+.intro-text, h1, h2, p {
+  font-weight: bold; /* or use 600/700 depending on the font */
+}
+
