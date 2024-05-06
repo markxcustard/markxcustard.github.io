@@ -124,7 +124,7 @@ a:hover {
   height: auto;
   padding: 200px 0;
   text-align: center;
-  color: white;
+  color: rgb(7, 7, 7);
   background: url("../img/pic_3.jpg") no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
@@ -164,14 +164,14 @@ a:hover {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  color: white;
-  border: 2px solid white;
+  color: rgb(7, 7, 7);
+  border: 2px solid black;
   border-radius: 100% !important;
   background: transparent;
 }
 .btn-circle:focus,
 .btn-circle:hover {
-  color: white;
+  color: black;
   outline: none;
   background: rgba(255, 255, 255, 0.1);
 }
