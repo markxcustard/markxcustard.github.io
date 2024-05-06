@@ -335,7 +335,7 @@ ul {
 
 /* Adjusting header and text styling */
 h1, .intro-text {
-  color: #ffffff; /* Bright white color for maximum contrast */
+  color: black; /* Bright white color for maximum contrast */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Darker shadow for better legibility */
   position: relative; /* Ensure text is above the overlay */
 }
@@ -358,11 +358,11 @@ h1 {
   height: 60px; /* Adjust based on design preference */
   line-height: 60px; /* Center icon vertically */
   color: #333; /* Dark text for contrast */
-  background-color: #fff; /* Solid white for visibility */
+  background-color: black; /* Solid white for visibility */
   border-radius: 50%;
   border: none;
 }
 
 .btn-circle:hover {
-  background-color: #e9ecef; /* Light grey background on hover for interactive feedback */
+  background-color: black; /* Light grey background on hover for interactive feedback */
 }
