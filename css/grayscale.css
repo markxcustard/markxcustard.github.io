@@ -215,22 +215,35 @@ img::selection, img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
-.portfolio-item {
+#portfolio {
+  text-align: center;
+  color: #fff; /* Adjust text color as needed */
+}
+
+#portfolio h2, #portfolio h3 {
+  text-transform: none; /* Removes uppercase transformation */
   margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc; /* Visual separation between items */
 }
 
-.portfolio-details {
-  padding: 10px;
-  background-color: #f9f9f9; /* Light background for the details to stand out */
+.portfolio-item {
+  margin-bottom: 40px;
 }
 
-.toggle-heading {
-  cursor: pointer; /* Indicates the element is interactive */
-  color: #007bff; /* Theme color for headings */
+.portfolio-item h3 {
+  cursor: default;
 }
 
-.toggle-heading:hover {
-  text-decoration: underline; /* Additional visual cue */
+.portfolio-item div {
+  text-align: left; /* Aligns the text of the details to the left */
+  margin: auto; /* Centers the div if it has a set width */
+  width: 80%; /* Adjust width as necessary */
+}
+
+.portfolio-item ul {
+  list-style-type: disc; /* Ensures bullet points are visible */
+  padding-left: 20px; /* Proper indentation for bullet lists */
+}
+
+.content-section {
+  padding: 50px 0; /* Adjusts the padding around sections for spacing */
 }
