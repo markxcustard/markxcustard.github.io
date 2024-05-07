@@ -234,3 +234,11 @@ body {
 #portfolio .portfolio-items {
   text-align: center; /* This resets the text alignment for the content within the portfolio items if needed */
 }
+
+.portfolio-item h3 {
+  cursor: pointer; /* Shows a pointer cursor on hover to indicate clickability */
+}
+
+.portfolio-item h3:hover {
+  color: #007bff; /* Changes color on hover for a visual cue */
+}

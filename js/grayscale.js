@@ -49,6 +49,18 @@ google.maps.event.addDomListener(window, 'resize', function() {
   map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
 });
 
+<script>
+function toggleDetails(element) {
+  // This function toggles the visibility of the next sibling element of the clicked h3, which is the .portfolio-details div
+  var details = element.querySelector('.portfolio-details');
+  if (details.style.display === 'none') {
+    details.style.display = 'block';
+  } else {
+    details.style.display = 'none';
+  }
+}
+</script>      
+
 function init() {
   // Basic options for a simple Google Map
   // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
