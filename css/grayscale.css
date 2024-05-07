@@ -76,9 +76,9 @@ a:hover, a:focus {
   height: auto; /* Default to auto for better responsiveness */
   padding: 200px 0;
   text-align: center;
-  color: rgb(7, 7, 7);
+  color: #868e96;
   background: url("../img/pic_3.jpg") no-repeat bottom center scroll;
-  background-color: black;
+  background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -97,7 +97,7 @@ a:hover, a:focus {
   height: 55px;
   margin-top: 15px;
   line-height: 45px;
-  color: rgb(7, 7, 7);
+  color: #868e96;
   border: 2px solid black;
   border-radius: 100% !important;
   background: transparent;
