@@ -296,7 +296,10 @@ h2, h3, p {
   font-size: 18px; /* Example to ensure it's being applied, change font size or other noticeable style */
 }
 
-#intro .intro-body .intro-text {
-  color: #868e96; /* Grey color */
-}
+<style>
+  #intro .intro-body .intro-text {
+    color: #868e96 !important; /* Ensuring this takes precedence */
+  }
+</style>
+
 
