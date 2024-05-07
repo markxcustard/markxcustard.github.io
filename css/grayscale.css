@@ -246,3 +246,43 @@ body {
     width: 95%; /* Makes the item wider on smaller screens */
   }
 }
+/* Global container adjustments for better desktop viewing */
+.container {
+  max-width: 1200px; /* Limits the maximum width of the content */
+  margin: auto; /* Centers the content */
+  padding: 20px; /* Adds padding around the content */
+}
+
+/* Responsive text sizing */
+h2, h3, p {
+  font-size: calc(16px + 0.5vw); /* Scales the font size based on the viewport width */
+}
+
+/* Section padding for better spacing on desktop */
+.content-section {
+  padding-top: 100px; /* More top padding */
+  padding-bottom: 100px; /* More bottom padding */
+}
+
+/* Portfolio item adjustments for desktop */
+.portfolio-item {
+  margin-bottom: 50px; /* Adds more space between portfolio items */
+}
+
+/* Adjustments for list items in the portfolio details to ensure they are not too wide */
+.portfolio-details ul {
+  padding-left: 20px; /* Ensures proper indentation of lists */
+  max-width: 800px; /* Prevents lists from becoming too wide */
+}
+
+@media (min-width: 992px) {
+  .portfolio-details {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Ensuring the intro and portfolio sections are visually appealing on larger screens */
+#intro, #portfolio {
+  text-align: center; /* Centers the text for better visual alignment */
+}
