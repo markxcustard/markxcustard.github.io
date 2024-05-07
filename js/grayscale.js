@@ -40,3 +40,12 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+
+// Function to toggle visibility of portfolio details
+function toggleDetails(details) {
+  if (details.style.display === 'none') {
+    details.style.display = 'block';
+  } else {
+    details.style.display = 'none';
+  }
+}

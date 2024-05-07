@@ -215,3 +215,22 @@ img::selection, img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+.portfolio-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Visual separation between items */
+}
+
+.portfolio-details {
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background for the details to stand out */
+}
+
+.toggle-heading {
+  cursor: pointer; /* Indicates the element is interactive */
+  color: #007bff; /* Theme color for headings */
+}
+
+.toggle-heading:hover {
+  text-decoration: underline; /* Additional visual cue */
+}
