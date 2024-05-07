@@ -40,28 +40,3 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
-
-function toggleDetails(element) {
-  // Using jQuery to toggle the visibility
-  $(element).next().slideToggle();
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  var headings = document.querySelectorAll('.portfolio-item h3');
-  headings.forEach(function(heading) {
-    heading.addEventListener('click', function() {
-      var details = this.nextElementSibling;
-      if (details.style.display === 'none') {
-        details.style.display = 'block';
-      } else {
-        details.style.display = 'none';
-      }
-    });
-  });
-});
-
-$(document).ready(function() {
-  $('.portfolio-item h3').on('click', function() {
-    $(this).next().slideToggle();
-  });
-});
