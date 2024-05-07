@@ -42,12 +42,8 @@
 })(jQuery); // End of use strict
 
 function toggleDetails(element) {
-  var details = element.nextElementSibling; // This gets the next sibling element
-  if (details.style.display === 'none') {
-    details.style.display = 'block'; // Show details
-  } else {
-    details.style.display = 'none'; // Hide details
-  }
+  // Using jQuery to toggle the visibility
+  $(element).next().slideToggle();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -61,5 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
         details.style.display = 'none';
       }
     });
+  });
+});
+
+$(document).ready(function() {
+  $('.portfolio-item h3').on('click', function() {
+    $(this).next().slideToggle();
   });
 });
