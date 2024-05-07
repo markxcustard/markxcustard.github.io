@@ -232,5 +232,5 @@ body {
 }
 
 #portfolio .portfolio-items {
-  text-align: left; /* This resets the text alignment for the content within the portfolio items if needed */
+  text-align: center; /* This resets the text alignment for the content within the portfolio items if needed */
 }
