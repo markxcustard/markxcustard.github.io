@@ -290,3 +290,8 @@ h2, h3, p {
 #intro .intro-text {
   color: #868e96; /* Grey color */
 }
+/* Ensuring higher specificity by using ID and class together */
+#intro .intro-text {
+  color: #868e96;  /* Applying grey color */
+  font-size: 18px; /* Example to ensure it's being applied, change font size or other noticeable style */
+}
