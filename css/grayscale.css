@@ -286,3 +286,7 @@ h2, h3, p {
 #intro, #portfolio {
   text-align: center; /* Centers the text for better visual alignment */
 }
+/* Directly targeting the ID of the section and the class of the element to ensure high specificity */
+#intro .intro-text {
+  color: #868e96; /* Grey color */
+}
