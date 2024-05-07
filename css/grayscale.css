@@ -215,35 +215,34 @@ img::selection, img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
-#portfolio {
+/* Portfolio Section Improvements */
+#portfolio h2 {
   text-align: center;
-  color: #fff; /* Adjust text color as needed */
-}
-
-#portfolio h2, #portfolio h3 {
-  text-transform: none; /* Removes uppercase transformation */
-  margin-bottom: 20px;
-}
-
-.portfolio-item {
-  margin-bottom: 40px;
 }
 
 .portfolio-item h3 {
-  cursor: default;
+  text-transform: capitalize; /* Changes the title case */
+  cursor: pointer; /* Suggests clickability */
 }
 
-.portfolio-item div {
-  text-align: left; /* Aligns the text of the details to the left */
-  margin: auto; /* Centers the div if it has a set width */
-  width: 80%; /* Adjust width as necessary */
+.portfolio-item {
+  margin-bottom: 20px; /* Ensures consistent spacing between items */
+  padding: 10px; /* Padding for content inside each item */
+  border: 1px solid #ccc; /* Adds a subtle border */
+  background-color: #f9f9f9; /* Light background for the content block */
+  width: 80%; /* Standardizes width */
+  margin-left: auto; /* Centers the block */
+  margin-right: auto; /* Centers the block */
 }
 
-.portfolio-item ul {
-  list-style-type: disc; /* Ensures bullet points are visible */
-  padding-left: 20px; /* Proper indentation for bullet lists */
+.portfolio-details {
+  text-align: left; /* Aligns the text inside details to the left */
+  display: none; /* Keeps details hidden initially */
 }
 
-.content-section {
-  padding: 50px 0; /* Adjusts the padding around sections for spacing */
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 95%; /* Makes the item wider on smaller screens */
+  }
 }
