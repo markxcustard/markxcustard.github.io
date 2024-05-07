@@ -41,12 +41,25 @@
 
 })(jQuery); // End of use strict
 
-// Function to toggle the visibility of job details in the portfolio section
 function toggleDetails(element) {
-  var details = element.nextElementSibling;
+  var details = element.nextElementSibling; // This gets the next sibling element
   if (details.style.display === 'none') {
-    details.style.display = 'block';
+    details.style.display = 'block'; // Show details
   } else {
-    details.style.display = 'none';
+    details.style.display = 'none'; // Hide details
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var headings = document.querySelectorAll('.portfolio-item h3');
+  headings.forEach(function(heading) {
+    heading.addEventListener('click', function() {
+      var details = this.nextElementSibling;
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+      } else {
+        details.style.display = 'none';
+      }
+    });
+  });
+});
