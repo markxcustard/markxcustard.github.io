@@ -349,6 +349,66 @@
   }
 }
 
+#testimonials {
+  background-color: #222;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+#testimonials h2 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.testimonials-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-item {
+  max-width: 800px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  #testimonials {
+    padding: 40px 10px;
+  }
+
+  .testimonial-item {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 1em;
+  }
+
+  .testimonial-author {
+    font-size: 0.9em;
+  }
+}
+
+
   </style>
 </head>
 <body id="page-top">
@@ -556,7 +616,7 @@
         <p class="testimonial-author">- Santiago Guerrero, SR Software Development Engineer in Testing at Glassdoor</p>
       </div>
 
-      <!-- Add more testimonials as needed -->
+      <!-- Testimonial Item -->
       <div class="testimonial-item">
         <p class="testimonial-text">"Mark's dedication and thorough approach to testing have significantly improved our product quality."</p>
         <p class="testimonial-author">- John Smith, Project Manager at ABC Inc.</p>
