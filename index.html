@@ -72,14 +72,14 @@
       color: white;
       background-color: rgba(255, 255, 255, 0.3);
     }
-    /* Masthead Styles */
+   /* Masthead Styles */
     .masthead {
       display: table;
       width: 100%;
       height: auto;
       padding: 200px 0;
       text-align: center;
-      color: #333333;
+      color: #868e96; /* Keep this as the default color for larger screens */
       background: url("img/intro-bg.jpg") no-repeat bottom center scroll;
       background-color: #000;
       background-size: cover;
@@ -88,6 +88,7 @@
       display: table-cell;
       vertical-align: middle;
     }
+
     /* Button Styles */
     .btn-circle {
       font-size: 26px;
@@ -95,11 +96,20 @@
       height: 55px;
       margin-top: 15px;
       line-height: 45px;
-      color: #333333;
+      color: #868e96; /* Keep this as the default color for larger screens */
       border: 2px solid black;
       border-radius: 100% !important;
       background: transparent;
     }
+
+    @media (max-width: 768px) {
+      .masthead .intro-body h1,
+      .masthead .intro-body .intro-text,
+      .btn-circle {
+        color: #333333; /* Darkest shade of grey for mobile */
+      }
+    }
+
     .btn-circle:hover, .btn-circle:focus {
       background: rgba(255, 255, 255, 0.1);
     }
