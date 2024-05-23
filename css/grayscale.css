@@ -28,9 +28,11 @@ p {
 }
 
 a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #42dca3;
-  text-decoration: none;
+  text-decoration: none; /* Apply to all anchors to remove underline */
 }
 
 a:hover, a:focus {
@@ -41,7 +43,7 @@ a:hover, a:focus {
 #mainNav {
   font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  background-color: black;
+  background-color: black; /* Applied to both states */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 0;
 }
@@ -71,12 +73,15 @@ a:hover, a:focus {
 .masthead {
   display: table;
   width: 100%;
-  height: auto;
+  height: auto; /* Default to auto for better responsiveness */
   padding: 200px 0;
   text-align: center;
   color: #868e96;
-  background: url("img/intro-bg.jpg") no-repeat bottom center scroll;
+  background: url("../img/pic_3.jpg") no-repeat bottom center scroll;
   background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -119,6 +124,16 @@ a:hover, a:focus {
   padding-bottom: 150px;
 }
 
+.download-section {
+  color: white;
+  background: url("../img/pic_2.jpg") no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* Footer Styles */
 footer {
   padding: 50px 0;
@@ -138,7 +153,7 @@ footer p {
   }
 
   .masthead {
-    height: 100%;
+    height: 100%; /* Full height for larger devices */
     padding: 0;
   }
 
@@ -200,10 +215,85 @@ img::selection, img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
-
 /* Portfolio Section Improvements */
 #portfolio h2 {
   text-align: center;
+}
+
+.portfolio-item h3 {
+  text-transform: capitalize; /* Changes the title case */
+  cursor: pointer; /* Suggests clickability */
+}
+
+.portfolio-item {
+  margin-bottom: 20px; /* Ensures consistent spacing between items */
+  padding: 10px; /* Padding for content inside each item */
+  border: 1px solid #ccc; /* Adds a subtle border */
+  background-color: #f9f9f9; /* Light background for the content block */
+  width: 80%; /* Standardizes width */
+  margin-left: auto; /* Centers the block */
+  margin-right: auto; /* Centers the block */
+}
+
+.portfolio-details {
+  text-align: left; /* Aligns the text inside details to the left */
+  display: none; /* Keeps details hidden initially */
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 95%; /* Makes the item wider on smaller screens */
+  }
+}
+/* Global container adjustments for better desktop viewing */
+.container {
+  max-width: 1200px; /* Limits the maximum width of the content */
+  margin: auto; /* Centers the content */
+  padding: 20px; /* Adds padding around the content */
+}
+
+/* Responsive text sizing */
+h2, h3, p {
+  font-size: calc(16px + 0.5vw); /* Scales the font size based on the viewport width */
+}
+
+/* Section padding for better spacing on desktop */
+.content-section {
+  padding-top: 100px; /* More top padding */
+  padding-bottom: 100px; /* More bottom padding */
+}
+
+/* Portfolio item adjustments for desktop */
+.portfolio-item {
+  margin-bottom: 50px; /* Adds more space between portfolio items */
+}
+
+/* Adjustments for list items in the portfolio details to ensure they are not too wide */
+.portfolio-details ul {
+  padding-left: 20px; /* Ensures proper indentation of lists */
+  max-width: 800px; /* Prevents lists from becoming too wide */
+}
+
+@media (min-width: 992px) {
+  .portfolio-details {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Ensuring the intro and portfolio sections are visually appealing on larger screens */
+#intro, #portfolio {
+  text-align: center; /* Centers the text for better visual alignment */
+}
+/* Directly targeting the ID of the section and the class of the element to ensure high specificity */
+#intro .intro-text {
+  color: #868e96; /* Grey color */
+}
+/* Ensuring higher specificity by using ID and class together */
+#intro .intro-text {
+  color: #868e96;  /* Applying grey color */
+  font-size: 18px; /* Example to ensure it's being applied, change font size or other noticeable style */
 }
 
 .portfolio-title {
@@ -226,99 +316,59 @@ body {
 
 .portfolio-details ul li::before {
   content: '•';
-  color: #42dca3;
+  color: #42dca3; /* Customize the color as needed */
   display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
 
-.portfolio-item {
-  margin-bottom: 30px;
-}
-
-.card {
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #222;
-  color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-title {
-  margin-bottom: 20px;
-  font-size: 1.5em;
-}
-
-.card-body {
-  text-align: left;
-}
-
-.portfolio-title {
-  text-transform: capitalize;
-  color: #42dca3;
-  font-weight: bold;
-}
-
-.portfolio-title:hover {
-  text-decoration: none;
-}
-
-.portfolio-details {
-  margin-top: 15px;
-}
-
-.portfolio-details p {
-  margin: 5px 0;
-}
-
-.portfolio-details ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-.portfolio-details ul li {
-  position: relative;
-  padding-left: 20px;
+.portfolio-item h3 {
+  cursor: pointer; /* Suggests clickability */
   margin-bottom: 10px;
 }
 
-.portfolio-details ul li::before {
-  content: '•';
-  color: #42dca3;
-  position: absolute;
-  left: 0;
-  top: 0;
+.portfolio-item {
+  margin-bottom: 20px; /* Ensures consistent spacing between items */
+  padding: 20px; /* Padding for content inside each item */
+  border: 1px solid #ccc; /* Adds a subtle border */
+  background-color: #222; /* Dark background for the content block */
+  width: 80%; /* Standardizes width */
+  margin-left: auto; /* Centers the block */
+  margin-right: auto; /* Centers the block */
+}
+
+.portfolio-details {
+  text-align: left; /* Aligns the text inside details to the left */
 }
 
 @media (max-width: 768px) {
   .portfolio-item {
-    width: 95%;
+    width: 95%; /* Makes the item wider on smaller screens */
   }
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  max-width: 1200px; /* Limits the maximum width of the content */
+  margin: auto; /* Centers the content */
+  padding: 20px; /* Adds padding around the content */
 }
 
 h2, h3, p {
-  font-size: calc(16px + 0.5vw);
+  font-size: calc(16px + 0.5vw); /* Scales the font size based on the viewport width */
 }
 
 .content-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 100px; /* More top padding */
+  padding-bottom: 100px; /* More bottom padding */
 }
 
 .portfolio-item {
-  margin-bottom: 50px;
+  margin-bottom: 50px; /* Adds more space between portfolio items */
 }
 
 .portfolio-details ul {
-  padding-left: 20px;
-  max-width: 800px;
+  padding-left: 20px; /* Ensures proper indentation of lists */
+  max-width: 800px; /* Prevents lists from becoming too wide */
 }
 
 @media (min-width: 992px) {
@@ -329,72 +379,10 @@ h2, h3, p {
 }
 
 #intro, #portfolio {
-  text-align: center;
+  text-align: center; /* Centers the text for better visual alignment */
 }
 
-/* Testimonials Section */
-#testimonials {
-  background-color: #222;
-  color: #fff;
-  padding: 60px 20px;
-}
-
-#testimonials h2 {
-  margin-bottom: 40px;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-.testimonials-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.testimonial-item {
-  max-width: 800px;
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #333;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-text {
-  font-size: 1.2em;
-  font-style: italic;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.testimonial-author {
-  font-size: 1em;
-  font-weight: bold;
-  text-align: right;
-}
-
-@media (max-width: 768px) {
-  #testimonials {
-    padding: 40px 10px;
-  }
-
-  .testimonial-item {
-    width: 95%;
-    margin-bottom: 20px;
-  }
-
-  .testimonial-text {
-    font-size: 1em;
-  }
-
-  .testimonial-author {
-    font-size: 0.9em;
-  }
-}
-
-/* Specific Styles for Intro Section */
 #intro .intro-text {
-  color: #868e96;
-  font-size: 18px;
-  font-weight: bold;
+  color: #868e96; /* Grey color */
+  font-size: 18px; /* Ensures it's being applied */
 }
