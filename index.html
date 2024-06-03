@@ -466,12 +466,14 @@
     color: #42dca3;
     border: 1px solid #42dca3;
     background-color: transparent;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 30px; /* Adjust padding for better alignment */
+    padding: 10px 20px; /* Adjust padding for better alignment */
     text-align: center;
     font-weight: bold; /* Make text bold */
+    box-sizing: border-box; /* Ensure padding is included in the button dimensions */
+    width: 250px; /* Set a fixed width */
   }
 
   .btn-default:hover,
