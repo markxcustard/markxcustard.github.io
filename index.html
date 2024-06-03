@@ -459,6 +459,8 @@
     .resume-button-container {
       text-align: center; /* Center the content */
       margin-top: 20px;
+      display: flex;
+      justify-content: center; /* Center the button within the container */
     }
 
     .btn-default {
@@ -468,12 +470,12 @@
       padding: 10px 20px; /* Adjust padding */
       font-weight: bold;
       height: 50px; /* Ensure consistent height */
-      display: inline-flex; /* Use inline-flex */
+      display: flex; /* Use flexbox */
       justify-content: center; /* Center horizontally */
       align-items: center; /* Center vertically */
       text-align: center; /* Ensure text is centered */
       box-sizing: border-box;
-      margin: 0 auto; /* Center the button itself */
+      margin: 0; /* Remove margin to prevent shifting */
       width: fit-content; /* Make button fit the content */
     }
 
