@@ -468,12 +468,14 @@
       padding: 0 40px; /* Ensure appropriate padding */
       font-weight: bold;
       height: 60px; /* Increase height */
-      display: flex; /* Use flexbox */
+      display: inline-flex; /* Use flexbox */
       justify-content: center; /* Center horizontally */
       align-items: center; /* Center vertically */
       text-align: center; /* Ensure text is centered */
       box-sizing: border-box;
       margin: 0 auto; /* Center the button itself */
+      width: auto; /* Ensure button width fits content */
+      min-width: 200px; /* Set a minimum width if needed */
     }
 
     .btn-default:hover,
@@ -486,6 +488,19 @@
       display: inline-block;
       margin: 0 5px; /* Adjust spacing between icons */
       font-size: 1.2em; /* Adjust size of icons */
+      color: #42dca3; /* Ensure color matches */
+      border: 1px solid #42dca3; /* Border for social links */
+      padding: 10px 20px; /* Padding for social links */
+      text-align: center; /* Center text in social links */
+      box-sizing: border-box;
+      height: 50px; /* Ensure consistent height */
+      line-height: 30px; /* Ensure consistent line height */
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      color: black;
+      background-color: #42dca3;
     }
 
 </style>
