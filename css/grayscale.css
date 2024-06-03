@@ -28,11 +28,9 @@ p {
 }
 
 a {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #42dca3;
-  text-decoration: none; /* Apply to all anchors to remove underline */
+  text-decoration: none;
 }
 
 a:hover, a:focus {
@@ -43,7 +41,7 @@ a:hover, a:focus {
 #mainNav {
   font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  background-color: black; /* Applied to both states */
+  background-color: black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 0;
 }
@@ -73,15 +71,12 @@ a:hover, a:focus {
 .masthead {
   display: table;
   width: 100%;
-  height: auto; /* Default to auto for better responsiveness */
+  height: auto;
   padding: 200px 0;
   text-align: center;
   color: #868e96;
   background: url("img/intro-bg.jpg") no-repeat bottom center scroll;
   background-color: #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -128,9 +123,6 @@ a:hover, a:focus {
   color: white;
   background: url("../img/pic_2.jpg") no-repeat center center scroll;
   background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -153,7 +145,7 @@ footer p {
   }
 
   .masthead {
-    height: 100%; /* Full height for larger devices */
+    height: 100%;
     padding: 0;
   }
 
@@ -215,64 +207,61 @@ img::selection, img::-moz-selection {
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+
 /* Portfolio Section Improvements */
 #portfolio h2 {
   text-align: center;
 }
 
 .portfolio-item h3 {
-  text-transform: capitalize; /* Changes the title case */
-  cursor: pointer; /* Suggests clickability */
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
 .portfolio-item {
-  margin-bottom: 20px; /* Ensures consistent spacing between items */
-  padding: 10px; /* Padding for content inside each item */
-  border: 1px solid #ccc; /* Adds a subtle border */
-  background-color: #f9f9f9; /* Light background for the content block */
-  width: 80%; /* Standardizes width */
-  margin-left: auto; /* Centers the block */
-  margin-right: auto; /* Centers the block */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-details {
-  text-align: left; /* Aligns the text inside details to the left */
-  display: none; /* Keeps details hidden initially */
+  text-align: left;
+  display: none;
 }
 
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
   .portfolio-item {
-    width: 95%; /* Makes the item wider on smaller screens */
+    width: 95%;
   }
 }
-/* Global container adjustments for better desktop viewing */
+
 .container {
-  max-width: 1200px; /* Limits the maximum width of the content */
-  margin: auto; /* Centers the content */
-  padding: 20px; /* Adds padding around the content */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* Responsive text sizing */
 h2, h3, p {
-  font-size: calc(16px + 0.5vw); /* Scales the font size based on the viewport width */
+  font-size: calc(16px + 0.5vw);
 }
 
-/* Section padding for better spacing on desktop */
 .content-section {
-  padding-top: 100px; /* More top padding */
-  padding-bottom: 100px; /* More bottom padding */
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-/* Portfolio item adjustments for desktop */
 .portfolio-item {
-  margin-bottom: 50px; /* Adds more space between portfolio items */
+  margin-bottom: 50px;
 }
 
-/* Adjustments for list items in the portfolio details to ensure they are not too wide */
 .portfolio-details ul {
-  padding-left: 20px; /* Ensures proper indentation of lists */
-  max-width: 800px; /* Prevents lists from becoming too wide */
+  padding-left: 20px;
+  max-width: 800px;
 }
 
 @media (min-width: 992px) {
@@ -282,107 +271,97 @@ h2, h3, p {
   }
 }
 
-/* Ensuring the intro and portfolio sections are visually appealing on larger screens */
 #intro, #portfolio {
-  text-align: center; /* Centers the text for better visual alignment */
+  text-align: center;
 }
-/* Directly targeting the ID of the section and the class of the element to ensure high specificity */
+
 #intro .intro-text {
-  color: #868e96; /* Grey color */
-}
-/* Ensuring higher specificity by using ID and class together */
-#intro .intro-text {
-  color: #868e96;  /* Applying grey color */
-  font-size: 18px; /* Example to ensure it's being applied, change font size or other noticeable style */
+  color: #868e96;
+  font-size: 18px;
 }
 
-.portfolio-title {
-  text-transform: lowercase;
+/* About Me Section */
+#about {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
 }
 
-.portfolio-title::first-letter {
-  text-transform: uppercase;
+#about h2 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
-.portfolio-details ul {
-  list-style: none;
-  padding-left: 0;
+.about-content {
+  font-family: 'Times New Roman', serif;
+  line-height: 1.5;
+  font-size: 20px;
+  text-align: justify;
+  text-indent: 20px;
 }
 
-.portfolio-details ul li {
-  text-align: left;
-  margin-bottom: 10px;
+.about-content p {
+  margin-bottom: 20px;
 }
 
-.portfolio-details ul li::before {
-  content: '•';
-  color: #42dca3; /* Customize the color as needed */
+.resume-button-container {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-default {
+  color: #42dca3;
+  border: 1px solid #42dca3;
+  background-color: transparent;
+  padding: 10px 30px;
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: 200px; /* Ensure a minimum width for the button */
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  color: black;
+  background-color: #42dca3;
+}
+
+.social-links a {
   display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  margin: 0 5px;
+  font-size: 1.2em;
+  color: #42dca3;
+  border: 1px solid #42dca3;
+  padding: 10px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 30px;
 }
 
-.portfolio-item h3 {
-  cursor: pointer; /* Suggests clickability */
-  margin-bottom: 10px;
+.social-links a:hover,
+.social-links a:focus {
+  color: black;
+  background-color: #42dca3;
 }
 
-.portfolio-item {
-  margin-bottom: 20px; /* Ensures consistent spacing between items */
-  padding: 20px; /* Padding for content inside each item */
-  border: 1px solid #ccc; /* Adds a subtle border */
-  background-color: #222; /* Dark background for the content block */
-  width: 80%; /* Standardizes width */
-  margin-left: auto; /* Centers the block */
-  margin-right: auto; /* Centers the block */
-}
-
-.portfolio-details {
-  text-align: left; /* Aligns the text inside details to the left */
-}
-
-@media (max-width: 768px) {
-  .portfolio-item {
-    width: 95%; /* Makes the item wider on smaller screens */
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .btn-default {
+    width: 100%;
+    padding: 10px;
   }
-}
 
-.container {
-  max-width: 1200px; /* Limits the maximum width of the content */
-  margin: auto; /* Centers the content */
-  padding: 20px; /* Adds padding around the content */
-}
-
-h2, h3, p {
-  font-size: calc(16px + 0.5vw); /* Scales the font size based on the viewport width */
-}
-
-.content-section {
-  padding-top: 100px; /* More top padding */
-  padding-bottom: 100px; /* More bottom padding */
-}
-
-.portfolio-item {
-  margin-bottom: 50px; /* Adds more space between portfolio items */
-}
-
-.portfolio-details ul {
-  padding-left: 20px; /* Ensures proper indentation of lists */
-  max-width: 800px; /* Prevents lists from becoming too wide */
-}
-
-@media (min-width: 992px) {
-  .portfolio-details {
-    padding-left: 15px;
-    padding-right: 15px;
+  .social-links a {
+    width: 100%;
+    margin-bottom: 10px;
   }
-}
-
-#intro, #portfolio {
-  text-align: center; /* Centers the text for better visual alignment */
-}
-
-#intro .intro-text {
-  color: #868e96; /* Grey color */
-  font-size: 18px; /* Ensures it's being applied */
 }
