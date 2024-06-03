@@ -505,19 +505,20 @@
       color: #42dca3;
       border: 1px solid #42dca3;
       background-color: transparent;
-      padding: 10px 30px;
+      padding: 10px 30px; /* Adjust padding for desktop */
       font-weight: bold;
-      height: 50px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      height: 50px; /* Ensure consistent height */
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      text-align: center; /* Ensure text is centered */
       box-sizing: border-box;
-      margin: 0 auto;
-      min-width: 200px;
+      margin: 0 auto; /* Center the button itself */
+      width: auto; /* Make button fit the content */
     }
 
-    .btn-default:hover, .btn-default:focus {
+    .btn-default:hover,
+    .btn-default:focus {
       color: black;
       background-color: #42dca3;
     }
