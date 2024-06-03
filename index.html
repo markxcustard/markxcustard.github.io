@@ -465,14 +465,15 @@
       color: #42dca3;
       border: 1px solid #42dca3;
       background-color: transparent;
-      padding: 0 40px; /* Increase padding to make the button larger */
+      padding: 0 40px; /* Ensure appropriate padding */
       font-weight: bold;
       height: 60px; /* Increase height */
-      line-height: 60px; /* Match line-height to height for vertical centering */
-      display: inline-block; /* Ensure it's inline-block */
-      text-align: center; /* Center text horizontally */
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      text-align: center; /* Ensure text is centered */
       box-sizing: border-box;
-      margin: 0; /* Ensure no margin issues */
+      margin: 0 auto; /* Center the button itself */
     }
 
     .btn-default:hover,
