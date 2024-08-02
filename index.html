@@ -586,6 +586,22 @@
       }
     }
 
+    .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expand-icon {
+    font-size: 1.5em; /* Adjust size as needed */
+    text-decoration: none;
+    color: inherit; /* Inherit color from the title */
+    margin-left: 10px; /* Space between title and icon */
+}
+
+.expand-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
 
   </style>
 </head>
@@ -662,13 +678,16 @@
   <div class="container">
     <h2>Portfolio</h2>
     <div class="portfolio-items">
-
-       <!-- Portfolio Item: BlueinGreen -->
-       <div class="card portfolio-item">
+      
+      <!-- Portfolio Item: BlueinGreen -->
+      <div class="card portfolio-item">
         <div class="card-body">
           <h3 class="card-title">
             <a class="portfolio-title" data-toggle="collapse" href="#blueingreen-details" aria-expanded="false" aria-controls="blueingreen-details">
               QA Analyst Manual | Automation at BlueinGreen
+            </a>
+            <a class="expand-icon" data-toggle="collapse" href="#blueingreen-details" aria-expanded="false" aria-controls="blueingreen-details">
+              &#x2795; <!-- Unicode character for plus sign -->
             </a>
           </h3>
           <div id="blueingreen-details" class="collapse portfolio-details">
@@ -689,6 +708,9 @@
           <h3 class="card-title">
             <a class="portfolio-title" data-toggle="collapse" href="#stake-details" aria-expanded="false" aria-controls="stake-details">
               QA Analyst at Stake (Fintech Industry)
+            </a>
+            <a class="expand-icon" data-toggle="collapse" href="#stake-details" aria-expanded="false" aria-controls="stake-details">
+              &#x2795;
             </a>
           </h3>
           <div id="stake-details" class="collapse portfolio-details">
@@ -716,6 +738,9 @@
             <a class="portfolio-title" data-toggle="collapse" href="#csc-details" aria-expanded="false" aria-controls="csc-details">
               QA Engineer at CSC Generation
             </a>
+            <a class="expand-icon" data-toggle="collapse" href="#csc-details" aria-expanded="false" aria-controls="csc-details">
+              &#x2795;
+            </a>
           </h3>
           <div id="csc-details" class="collapse portfolio-details">
             <p class="right-rag"><strong>Location:</strong> Merriville, IN, USA</p>
@@ -737,6 +762,9 @@
           <h3 class="card-title">
             <a class="portfolio-title" data-toggle="collapse" href="#kemper-details" aria-expanded="false" aria-controls="kemper-details">
               Software QA Analyst at Kemper Insurance
+            </a>
+            <a class="expand-icon" data-toggle="collapse" href="#kemper-details" aria-expanded="false" aria-controls="kemper-details">
+              &#x2795;
             </a>
           </h3>
           <div id="kemper-details" class="collapse portfolio-details">
@@ -760,6 +788,9 @@
             <a class="portfolio-title" data-toggle="collapse" href="#american-access-details" aria-expanded="false" aria-controls="american-access-details">
               Software QA Analyst at American Access Casualty Company
             </a>
+            <a class="expand-icon" data-toggle="collapse" href="#american-access-details" aria-expanded="false" aria-controls="american-access-details">
+              &#x2795;
+            </a>
           </h3>
           <div id="american-access-details" class="collapse portfolio-details">
             <p class="right-rag"><strong>Location:</strong> Downers Grove, IL, USA</p>
@@ -781,6 +812,9 @@
           <h3 class="card-title">
             <a class="portfolio-title" data-toggle="collapse" href="#junior-developer-details" aria-expanded="false" aria-controls="junior-developer-details">
               Junior Application Developer at American Access Casualty Company
+            </a>
+            <a class="expand-icon" data-toggle="collapse" href="#junior-developer-details" aria-expanded="false" aria-controls="junior-developer-details">
+              &#x2795;
             </a>
           </h3>
           <div id="junior-developer-details" class="collapse portfolio-details">
@@ -804,6 +838,9 @@
             <a class="portfolio-title" data-toggle="collapse" href="#tech-skills-details" aria-expanded="false" aria-controls="tech-skills-details">
               Technical Skills
             </a>
+            <a class="expand-icon" data-toggle="collapse" href="#tech-skills-details" aria-expanded="false" aria-controls="tech-skills-details">
+              &#x2795;
+            </a>
           </h3>
           <div id="tech-skills-details" class="collapse portfolio-details">
             <ul class="right-rag">
@@ -820,6 +857,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Projects section -->
 <section id="projects" class="content-section text-center">
