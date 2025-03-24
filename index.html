@@ -645,42 +645,78 @@
 </header>
 
 <!-- Intro Section with Background Overlay -->
-<section id="intro" class="masthead">
-  <div class="intro-body" style="position: relative; padding-top: 100px;">
+<section id="intro" class="masthead" style="position: relative;">
+  <!-- Background overlay for better contrast -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.85));
+    z-index: 1;
+  "></div>
+
+  <div class="intro-body" style="position: relative; z-index: 2; padding-top: 100px;">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
+        <div class="col-lg-10 mx-auto text-center">
           <div style="
-            background: rgba(255, 255, 255, 0.85);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
           ">
-            <h1 style="color: #222;">Mark Custard</h1>
-            <p class="intro-text" style="color: #333; font-size: 1.1em;">
-              Versatile and results-driven <strong>QA Analyst</strong> with over <strong>6 years of experience</strong> ensuring software quality across web, mobile, and TV platforms. Backed by a strong foundation in <strong>Business Law (LLB)</strong>, I bring a unique blend of analytical rigor, process thinking, and user-centric testing strategies to every project.
-              <br><br>
-              I thrive in fast-paced, cross-functional environments—collaborating with developers, designers, and stakeholders to deliver seamless, bug-free experiences at scale.
-              <br><br>
-              <strong>Core Expertise:</strong><br>
-              • Manual & Automated Testing – Playwright, Selenium, Rainforest QA<br>
-              • API, Integration, & Unit Testing – Postman, ChaiJS, Pytest<br>
-              • Test Planning, Strategy, & Execution – BDD, TDD, Agile QA Leadership<br>
-              • Data Validation & Analysis – SQL, Pandas, BigQuery<br>
-              • Salesforce Testing – 3+ Years Across Complex, Multi-Org Implementations<br>
-              • CI/CD Pipelines, GitHub Workflows, Jira, TestRail, Confluence<br>
-              • Agile, Scrum, & Kanban Environments<br>
-              • Strong Communicator, Fast Learner, Detail-Oriented & Curious by Nature<br>
+            <h1 style="font-size: 3em; font-weight: 800; letter-spacing: 1px; color: #1a1a1a;">
+              <span style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); -webkit-background-clip: text; color: transparent;">
+                Mark Custard
+              </span>
+            </h1>
+
+            <p class="intro-text" style="font-size: 1.15em; color: #333; margin-top: 20px; line-height: 1.7;">
+              Versatile and results-driven <strong>QA Analyst</strong> with over <strong>6 years of experience</strong> ensuring software quality across <strong>web, mobile, and TV platforms</strong>. Backed by a foundation in <strong>Business Law (LLB)</strong>, I bring a unique blend of analytical rigor, process thinking, and user-focused testing strategies to every project.
             </p>
-            <a href="#about" class="btn btn-circle js-scroll-trigger" aria-label="Scroll Down to About">
-              <i class="fa fa-angle-double-down animated"></i>
-            </a>
+
+            <p style="margin-top: 20px; font-size: 1.05em; color: #444;">
+              I thrive in fast-paced, cross-functional teams—partnering with developers, designers, and stakeholders to deliver intuitive, high-quality software at scale.
+            </p>
+
+            <hr style="margin: 30px 0; border-top: 1px solid #ccc;">
+
+            <h3 style="color: #222; font-weight: 700; margin-bottom: 15px;">Core Expertise</h3>
+            <ul style="list-style: none; padding: 0; color: #444; font-size: 1em; line-height: 1.8;">
+              <li>• Manual & Automated Testing – Playwright, Selenium, Rainforest QA</li>
+              <li>• API, Integration, & Unit Testing – Postman, ChaiJS, Pytest</li>
+              <li>• Test Strategy & Execution – Agile QA Leadership, BDD, TDD</li>
+              <li>• Data Validation & Analysis – SQL, Pandas, BigQuery</li>
+              <li>• Salesforce Testing – 3+ Years, Complex Multi-Org Implementations</li>
+              <li>• CI/CD, GitHub Workflows, Jira, TestRail, Confluence</li>
+              <li>• Agile, Scrum, & Kanban Methodologies</li>
+              <li>• Excellent Communicator, Problem-Solver, Detail-Oriented</li>
+            </ul>
           </div>
+          <a href="#about" class="btn btn-circle js-scroll-trigger" aria-label="Scroll Down to About" style="margin-top: 40px;">
+            <i class="fa fa-angle-double-down animated"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 
 <!-- About Me Section -->
 <section id="about" class="content-section text-center">
