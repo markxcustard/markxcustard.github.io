@@ -1298,8 +1298,8 @@ section,
 
 .contact form button[type=submit] {
   color: #ffffff;
-  background: #000000;
-  border: 2px solid #000000;
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
   padding: 14px 40px;
   font-size: 16px;
   font-weight: 600;
@@ -1311,10 +1311,9 @@ section,
 }
 
 .contact form button[type=submit]:hover {
-  background: transparent;
-  color: #000000;
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(20, 157, 221, 0.3);
 }
 
 /*--------------------------------------------------------------
