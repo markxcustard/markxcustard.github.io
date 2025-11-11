@@ -884,7 +884,7 @@
   <script>
     window.addEventListener('load', function() {
       const contactForm = document.querySelector('.contact form');
-      if (contactForm && window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+      if (contactForm) {
         contactForm.reset();
       }
     });
