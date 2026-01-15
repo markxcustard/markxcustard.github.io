@@ -806,6 +806,16 @@ section,
   font-size: 18px;
 }
 
+@media (max-width: 768px) {
+  .btn-download-resume {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
