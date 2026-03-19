@@ -1331,7 +1331,7 @@ section,
 }
 
 .contact .php-email-form label {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--default-font);
 }
 
 .contact .php-email-form input[type=text],
