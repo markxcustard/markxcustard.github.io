@@ -245,6 +245,10 @@ h6 {
 .header .header-toggle {
   color: var(--contrast-color);
   background-color: var(--accent-color);
+  border: 0;
+  padding: 0;
+  line-height: 1;
+  appearance: none;
   font-size: 22px;
   display: flex;
   align-items: center;
@@ -258,6 +262,11 @@ h6 {
   right: 15px;
   z-index: 9999;
   transition: background-color 0.3s;
+}
+
+.header .header-toggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent-color), white 45%);
+  outline-offset: 3px;
 }
 
 .header .header-toggle:hover {
@@ -350,7 +359,7 @@ h6 {
 
 .navmenu .dropdown a,
 .navmenu .dropdown a:focus {
-  color: --nav-dropdown-color;
+  color: var(--nav-dropdown-color);
 }
 
 .navmenu .dropdown a:hover,
@@ -608,6 +617,7 @@ section,
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  overflow-wrap: anywhere;
 }
 
 .hero .social-links {
@@ -634,6 +644,7 @@ section,
 
   .hero p {
     font-size: 20px;
+    max-width: 100%;
   }
 }
 
@@ -654,10 +665,16 @@ section,
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .about .content ul strong {
   margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.about .content ul span {
+  overflow-wrap: anywhere;
 }
 
 .about .content ul i {
@@ -1061,12 +1078,14 @@ section,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   color: #ffffff;
   font-weight: 600;
   font-size: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 12px 0;
+  overflow-wrap: anywhere;
 }
 
 .github-link:hover {
@@ -1310,6 +1329,11 @@ section,
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contact .info-item div {
+  min-width: 0;
 }
 
 .contact .info-item:hover i {

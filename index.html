@@ -39,7 +39,7 @@
 <body class="index-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <button class="header-toggle d-xl-none bi bi-list" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navmenu"></button>
 
     <div class="profile-img">
       <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
@@ -97,7 +97,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Mark Custard</h2>
-        <p>I'm a <span class="typed" data-typed-items="QA Analyst, Test Automation Engineer, Full-Stack Developer, API Testing Specialist, Cross-Platform Tester, Quality Assurance Specialist, Collaborative Team Member, Problem Solver, Detail-Oriented Professional, Continuous Learner, Software Tester">QA Analyst</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p>I'm a <span class="typed" data-typed-items="QA Analyst, Test Automation Engineer, API Testing Specialist, Cross-Platform Tester, Software Tester">QA Analyst</span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -258,7 +258,7 @@
               <ul>
                 <li>Architected and delivered complete booking platform generating £35k+ revenue and processing 375+ bookings in first 4 months</li>
                 <li>Led full-stack development from conception to production deployment with comprehensive auto-roster scheduling engine</li>
-                <li>Built enterprise-scale test suite with 6,500+ mocked unit and integration tests (99.2% pass rate, 85% code coverage)</li>
+                <li>Built enterprise-scale test suite with 8000+ mocked unit and integration tests (99.7% pass rate, 91% code coverage)</li>
                 <li>Implemented robust Stripe payment architecture with dynamic pricing, promo codes, and race-condition-free processing</li>
                 <li>Created business intelligence platform with financial analytics, occupancy forecasting, and revenue milestone tracking</li>
                 <li>Delivered scalable platform handling real-time bookings, automated scheduling, and multi-user concurrent operations</li>
@@ -295,7 +295,7 @@
                       </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title" style="visibility: hidden;">Professional Experience</h3>
+            <h3 class="resume-title d-none d-lg-block" aria-hidden="true">Professional Experience</h3>
             <div class="resume-item">
               <h4>QA Analyst</h4>
               <h5>March 2022 - May 2024</h5>
@@ -408,7 +408,7 @@
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/personal_website_automation" target="_blank" class="github-link">
+                  <a href="https://github.com/markxcustard/personal_website_automation" target="_blank" rel="noopener noreferrer" class="github-link">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -433,7 +433,7 @@
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/bdd_personal_website" target="_blank" class="github-link">
+                  <a href="https://github.com/markxcustard/bdd_personal_website" target="_blank" rel="noopener noreferrer" class="github-link">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -458,7 +458,7 @@
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/pandas_filtering_films" target="_blank" class="github-link">
+                  <a href="https://github.com/markxcustard/pandas_filtering_films" target="_blank" rel="noopener noreferrer" class="github-link">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -483,7 +483,7 @@
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/database_crud" target="_blank" class="github-link">
+                  <a href="https://github.com/markxcustard/database_crud" target="_blank" rel="noopener noreferrer" class="github-link">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -698,9 +698,13 @@
                   "slidesPerView": 1,
                   "spaceBetween": 40
                 },
+                "768": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 24
+                },
                 "1200": {
                   "slidesPerView": 3,
-                  "spaceBetween": 1
+                  "spaceBetween": 24
                 }
               }
             }
@@ -715,7 +719,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-                <h3><a href="https://www.linkedin.com/in/sguerrero22/" target="_blank">Santiago Guerrero</a></h3>
+                <h3><a href="https://www.linkedin.com/in/sguerrero22/" target="_blank" rel="noopener noreferrer">Santiago Guerrero</a></h3>
                 <h4>SR Software Development Engineer in Testing at Glassdoor</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -728,7 +732,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
-                <h3><a href="https://www.linkedin.com/in/jonathanyjkim/" target="_blank">Jon Kim</a></h3>
+                <h3><a href="https://www.linkedin.com/in/jonathanyjkim/" target="_blank" rel="noopener noreferrer">Jon Kim</a></h3>
                 <h4>iOS Developer at Stake</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -741,7 +745,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
-                <h3><a href="https://www.linkedin.com/in/juliaguimiot/" target="_blank">Julia Guimiot</a></h3>
+                <h3><a href="https://www.linkedin.com/in/juliaguimiot/" target="_blank" rel="noopener noreferrer">Julia Guimiot</a></h3>
                 <h4>Back End Software Engineer at Stake</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -754,7 +758,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-                <h3><a href="https://www.linkedin.com/in/dominic-withers-221002100/" target="_blank">Dominic Withers</a></h3>
+                <h3><a href="https://www.linkedin.com/in/dominic-withers-221002100/" target="_blank" rel="noopener noreferrer">Dominic Withers</a></h3>
                 <h4>Managing Director & Co-Founder at Withers & Wagg</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -767,7 +771,7 @@
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <!-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
-                <h3><a href="https://www.linkedin.com/in/kristian-andrews-82543b109" target="_blank">Kristian Andrews-Brown</a></h3>
+                <h3><a href="https://www.linkedin.com/in/kristian-andrews-82543b109" target="_blank" rel="noopener noreferrer">Kristian Andrews-Brown</a></h3>
                 <h4>Founder of TAG Parking</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -825,7 +829,7 @@
                 <i class="bi bi-linkedin flex-shrink-0"></i>
                 <div>
                   <h3>LinkedIn</h3>
-                  <p><a href="https://www.linkedin.com/in/mark-custard/" target="_blank">linkedin.com/in/mark-custard</a></p>
+                  <p><a href="https://www.linkedin.com/in/mark-custard/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mark-custard</a></p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -833,7 +837,7 @@
                 <i class="bi bi-github flex-shrink-0"></i>
                 <div>
                   <h3>GitHub</h3>
-                  <p><a href="https://github.com/markxcustard" target="_blank">github.com/markxcustard</a></p>
+                  <p><a href="https://github.com/markxcustard" target="_blank" rel="noopener noreferrer">github.com/markxcustard</a></p>
                 </div>
               </div><!-- End Info Item -->
 
