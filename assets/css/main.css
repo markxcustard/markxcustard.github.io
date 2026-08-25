@@ -617,7 +617,7 @@ section,
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .hero .social-links {
