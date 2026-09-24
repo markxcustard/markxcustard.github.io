@@ -857,41 +857,55 @@ section,
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 28px auto;
   list-style: none;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* WCAG 2.5.5 asks for a 44px target. The template shipped these as bare
+     14px-tall text, which is a poor tap target on a phone. */
+  min-height: 44px;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  transition: all 0.3s ease-in-out;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background: color-mix(in srgb, var(--heading-color), transparent 95%);
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+  border-radius: 999px;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
+.portfolio .portfolio-filters li:hover {
   color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
 }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
+.portfolio .portfolio-filters li.filter-active {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 @media (max-width: 575px) {
+  .portfolio .portfolio-filters {
+    gap: 8px;
+  }
+
   .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
+    padding: 10px 16px;
+    font-size: 12px;
   }
 }
 
@@ -965,173 +979,238 @@ section,
   transform: scale(1.1);
 }
 
-/* Modern Portfolio Card Styles - Matching Sidebar Dark Theme */
+/* Portfolio cards ---------------------------------------------------------
+   One padded container rather than three banded sections. The previous layout
+   spent 131px on the header and 95px on the footer before any content, which
+   made a card 441px tall for three lines of text — roughly one phone screen
+   each. */
 .portfolio-card {
-  background: #040b14;
-  border-radius: 12px;
-  padding: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  position: relative;
+  background: var(--nav-mobile-background-color);
+  border-radius: 16px;
+  padding: 22px 24px 20px;
+  box-shadow: 0 2px 10px rgba(2, 8, 20, 0.28);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  gap: 14px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* A soft accent wash so the cards read as a set without shouting. */
+.portfolio-card::before {
+  content: '';
+  position: absolute;
+  inset: -45% 58% 58% -28%;
+  background: radial-gradient(closest-side,
+      color-mix(in srgb, var(--accent-color), transparent 76%), transparent);
+  pointer-events: none;
 }
 
 .portfolio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+  box-shadow: 0 16px 34px rgba(2, 8, 20, 0.45);
 }
 
+/* Icon, title and metric share one row. */
 .portfolio-card-header {
-  padding: 30px 30px 20px;
-  background: #040b14;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0;
+  background: none;
+  color: var(--contrast-color);
   position: relative;
 }
 
 .portfolio-card-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  content: none;
 }
 
 .portfolio-icon {
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.1);
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0;
+  background: color-mix(in srgb, var(--accent-color), transparent 82%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 62%);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .portfolio-icon i {
-  font-size: 28px;
-  color: #ffffff;
+  font-size: 21px;
+  color: var(--accent-color);
 }
 
 .portfolio-card-header h3 {
   margin: 0;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--contrast-color);
   line-height: 1.3;
 }
 
+/* The headline number — the thing a reviewer cannot get from adjectives. */
+.portfolio-metric {
+  margin-left: auto;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 86%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+  border-radius: 999px;
+}
+
 .portfolio-card-body {
-  padding: 25px 30px;
+  padding: 0;
+  background: none;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background: #040b14;
+  gap: 14px;
 }
 
 .portfolio-card-body p {
-  color: #a8a9b4;
-  line-height: 1.7;
-  font-size: 15px;
-  margin-bottom: 20px;
-  flex-grow: 1;
+  margin: 0;
+  color: var(--nav-color);
+  line-height: 1.6;
+  font-size: 14.5px;
+  /* Clamped so every card settles at the same height whatever the copy. */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .portfolio-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
   margin-top: auto;
 }
 
 .portfolio-tags .tag {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 5px 11px;
   background: rgba(255, 255, 255, 0.05);
-  color: #a8a9b4;
-  border-radius: 20px;
-  font-size: 13px;
+  color: var(--nav-color);
+  border-radius: 999px;
+  font-size: 12px;
   font-weight: 500;
-  transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .portfolio-card:hover .portfolio-tags .tag {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--contrast-color);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .portfolio-card-footer {
-  padding: 20px 30px 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: #040b14;
+  padding: 0;
+  border-top: none;
+  background: none;
 }
 
 .github-link {
   display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  color: #ffffff;
+  gap: 8px;
+  padding: 0;
+  color: var(--contrast-color);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  padding: 12px 0;
+  transition: color 0.25s ease;
   overflow-wrap: anywhere;
 }
 
-.github-link:hover {
-  color: #a8a9b4;
-  padding-left: 8px;
+/* Makes the whole card a click target without nesting its text in the anchor,
+   so the accessible name stays the link's own aria-label. */
+.github-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.github-link:hover,
+.portfolio-card:hover .github-link {
+  color: var(--accent-color);
+  padding-left: 0;
+}
+
+.github-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .github-link i.bi-github {
-  font-size: 20px;
-  margin-right: 8px;
+  font-size: 17px;
+  margin-right: 0;
 }
 
 .github-link i.bi-arrow-right {
-  font-size: 18px;
-  transition: transform 0.3s ease;
+  font-size: 15px;
+  margin-left: auto;
+  transition: transform 0.25s ease;
 }
 
-.github-link:hover i.bi-arrow-right {
-  transform: translateX(5px);
+.github-link:hover i.bi-arrow-right,
+.portfolio-card:hover .github-link i.bi-arrow-right {
+  transform: translateX(4px);
 }
 
-/* Responsive adjustments for portfolio cards */
 @media (max-width: 768px) {
+  .portfolio-card {
+    padding: 18px 18px 16px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+
   .portfolio-card-header {
-    padding: 25px 25px 15px;
-  }
-
-  .portfolio-card-body {
-    padding: 20px 25px;
-  }
-
-  .portfolio-card-footer {
-    padding: 15px 25px 25px;
+    gap: 12px;
   }
 
   .portfolio-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
   }
 
   .portfolio-icon i {
-    font-size: 24px;
+    font-size: 19px;
   }
 
   .portfolio-card-header h3 {
-    font-size: 20px;
+    font-size: 16.5px;
+  }
+
+  .portfolio-metric {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+
+  .portfolio-card-body {
+    gap: 12px;
+  }
+
+  .portfolio-card-body p {
+    font-size: 14px;
   }
 }
 
