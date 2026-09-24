@@ -101,7 +101,10 @@
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
+    // Trimmed: splitting on ',' alone left a leading space on every item
+    // after the first, so the hero rendered "I'm a  Test Automation Engineer"
+    // with a double space, and the accent underline started on the space.
+    typed_strings = typed_strings.split(',').map(item => item.trim());
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
