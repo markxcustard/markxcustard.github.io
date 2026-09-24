@@ -105,8 +105,21 @@
     // after the first, so the hero rendered "I'm a  Test Automation Engineer"
     // with a double space, and the accent underline started on the space.
     typed_strings = typed_strings.split(',').map(item => item.trim());
+    // Clear the static fallback before handing the element to Typed.js.
+    // The markup carries the first role so the hero still reads correctly
+    // without JavaScript, but Typed.js expects to start from an empty element:
+    // left in place it treats the text as already typed and backspaces it, so
+    // the first thing a visitor sees is the whole phrase being deleted rather
+    // than typed.
+    selectTyped.textContent = '';
     new Typed('.typed', {
       strings: typed_strings,
+      // Plain text, not HTML. In its default 'html' mode Typed.js treats '&'
+      // as the start of an HTML entity and skips ahead to the next ';' — so
+      // "a QA & Automation Lead", which has no ';', was typed as far as
+      // "a QA " and then dumped whole. The roles contain no markup, so
+      // textContent is both correct and safer.
+      contentType: null,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,

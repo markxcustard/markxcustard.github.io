@@ -648,6 +648,18 @@ section,
   }
 }
 
+/* At 320px the longest role needs 309px against a 296px container, so the
+   line wrapped and split the accent underline across two rows. */
+@media (max-width: 359px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
