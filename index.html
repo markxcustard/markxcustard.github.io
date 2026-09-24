@@ -373,19 +373,19 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>A collection of my personal projects showcasing test automation, BDD practices, data processing, and API development skills.</p>
+        <p>Personal projects across test automation, BDD, data processing and database work &mdash; each one built test-first, with CI running the suite on every push.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-automation">Automation</li>
-            <li data-filter=".filter-bdd">BDD</li>
-            <li data-filter=".filter-api">API</li>
-            <li data-filter=".filter-data">Data</li>
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100" role="group" aria-label="Filter projects by discipline">
+            <li data-filter="*" class="filter-active" role="button" tabindex="0" aria-pressed="true">All</li>
+            <li data-filter=".filter-automation" role="button" tabindex="0" aria-pressed="false">Automation</li>
+            <li data-filter=".filter-bdd" role="button" tabindex="0" aria-pressed="false">BDD</li>
+            <li data-filter=".filter-data" role="button" tabindex="0" aria-pressed="false">Data</li>
+            <li data-filter=".filter-database" role="button" tabindex="0" aria-pressed="false">Database</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -396,18 +396,18 @@
                   <div class="portfolio-icon">
                     <i class="bi bi-robot"></i>
                   </div>
-                  <h4>Personal Website Automation</h4>
+                  <h3>Personal Website Automation</h3>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>Comprehensive test automation suite built with Selenium and Python, featuring automated test cases for website functionality validation.</p>
+                  <p>140 Selenium tests covering every section of this site. Page Object Model, explicit waits, Chrome and Firefox in CI, and a nightly run against production.</p>
                   <div class="portfolio-tags">
                     <span class="tag">Selenium</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Automation</span>
+                    <span class="tag">pytest</span>
+                    <span class="tag">Page Objects</span>
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/personal_website_automation" target="_blank" rel="noopener noreferrer" class="github-link">
+                  <a href="https://github.com/markxcustard/personal_website_automation" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View Personal Website Automation on GitHub">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -421,18 +421,43 @@
                   <div class="portfolio-icon">
                     <i class="bi bi-file-text"></i>
                   </div>
-                  <h4>BDD Personal Website</h4>
+                  <h3>BDD Personal Website</h3>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>Behavior-Driven Development implementation using Gherkin syntax and Selenium WebDriver for readable, maintainable test scenarios.</p>
+                  <p>74 Gherkin scenarios and 245 steps in Behave, with driver lifecycle handled in environment hooks rather than step definitions. Tagged for smoke, mobile and download runs.</p>
                   <div class="portfolio-tags">
                     <span class="tag">BDD</span>
                     <span class="tag">Gherkin</span>
-                    <span class="tag">Selenium</span>
+                    <span class="tag">Behave</span>
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/bdd_personal_website" target="_blank" rel="noopener noreferrer" class="github-link">
+                  <a href="https://github.com/markxcustard/bdd_personal_website" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View BDD Personal Website on GitHub">
+                    <i class="bi bi-github"></i> View on GitHub
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automation">
+              <div class="portfolio-card h-100">
+                <div class="portfolio-card-header">
+                  <div class="portfolio-icon">
+                    <i class="bi bi-lightning-charge"></i>
+                  </div>
+                  <h3>Cypress Portfolio Tests</h3>
+                </div>
+                <div class="portfolio-card-body">
+                  <p>129 Cypress tests across 10 specs, finishing in 26 seconds. Expected page content lives in a fixture, so a copy change touches one file rather than ten.</p>
+                  <div class="portfolio-tags">
+                    <span class="tag">Cypress</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">E2E</span>
+                  </div>
+                </div>
+                <div class="portfolio-card-footer">
+                  <a href="https://github.com/markxcustard/cypress_personal_website" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View Cypress Portfolio Tests on GitHub">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -446,18 +471,18 @@
                   <div class="portfolio-icon">
                     <i class="bi bi-table"></i>
                   </div>
-                  <h4>Pandas Filtering Films</h4>
+                  <h3>Pandas Filtering Films</h3>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>Data analysis and manipulation project leveraging Python's Pandas library for efficient film data filtering, sorting, and processing.</p>
+                  <p>Seven composable filters over a film dataset, each a pure function that never mutates its input. 54 tests covering boundaries, missing data and whole-word matching.</p>
                   <div class="portfolio-tags">
                     <span class="tag">Python</span>
                     <span class="tag">Pandas</span>
-                    <span class="tag">Data Analysis</span>
+                    <span class="tag">pytest</span>
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/pandas_filtering_films" target="_blank" rel="noopener noreferrer" class="github-link">
+                  <a href="https://github.com/markxcustard/pandas_filtering_films" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View Pandas Filtering Films on GitHub">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>
@@ -465,24 +490,24 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-api">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-database">
               <div class="portfolio-card h-100">
                 <div class="portfolio-card-header">
                   <div class="portfolio-icon">
-                    <i class="bi bi-hdd-network"></i>
+                    <i class="bi bi-database"></i>
                   </div>
-                  <h4>Films CRUD API</h4>
+                  <h3>Films CRUD</h3>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>RESTful API demonstrating full CRUD operations built with SQLAlchemy ORM and SQLite database for film data management.</p>
+                  <p>SQLAlchemy CRUD over SQLite behind an argparse CLI. 60 tests, each against its own in-memory database, running on Python 3.9 through 3.13.</p>
                   <div class="portfolio-tags">
-                    <span class="tag">API</span>
                     <span class="tag">SQLAlchemy</span>
                     <span class="tag">SQLite</span>
+                    <span class="tag">pytest</span>
                   </div>
                 </div>
                 <div class="portfolio-card-footer">
-                  <a href="https://github.com/markxcustard/database_crud" target="_blank" rel="noopener noreferrer" class="github-link">
+                  <a href="https://github.com/markxcustard/database_crud" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View Films CRUD on GitHub">
                     <i class="bi bi-github"></i> View on GitHub
                     <i class="bi bi-arrow-right"></i>
                   </a>

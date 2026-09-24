@@ -1018,7 +1018,7 @@ section,
   color: #ffffff;
 }
 
-.portfolio-card-header h4 {
+.portfolio-card-header h3 {
   margin: 0;
   font-size: 22px;
   font-weight: 600;
@@ -1130,7 +1130,7 @@ section,
     font-size: 24px;
   }
 
-  .portfolio-card-header h4 {
+  .portfolio-card-header h3 {
     font-size: 20px;
   }
 }
@@ -1555,4 +1555,13 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Portfolio filter keyboard focus
+--------------------------------------------------------------*/
+.portfolio .portfolio-filters li:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 50px;
 }

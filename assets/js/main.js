@@ -232,4 +232,26 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Keyboard support for the portfolio filters.
+   *
+   * The template ships them as bare <li> elements with click handlers, so they
+   * cannot be reached by keyboard at all. The markup now carries role="button"
+   * and tabindex="0"; this activates them on Enter/Space and keeps aria-pressed
+   * in step with the .filter-active class.
+   */
+  document.querySelectorAll('.portfolio-filters li').forEach(chip => {
+    chip.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+        event.preventDefault();
+        chip.click();
+      }
+    });
+    chip.addEventListener('click', () => {
+      chip.closest('.portfolio-filters').querySelectorAll('li').forEach(other => {
+        other.setAttribute('aria-pressed', String(other === chip));
+      });
+    });
+  });
+
 })();
