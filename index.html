@@ -108,7 +108,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>QA engineer with 7+ years across fintech, insurance and entertainment — including Netflix acquisition platforms and enterprise Salesforce integrations — now sole engineer of a live production booking platform built test-first behind a 13,600-test suite running in CI on every push.</p>
+        <p>QA engineer with 7+ years across fintech, insurance and entertainment — including Netflix acquisition platforms and enterprise Salesforce integrations — now sole engineer of a live production booking platform built test-first behind a 20,100-test suite running in CI on every push.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -141,7 +141,7 @@
               </div>
             </div>
             <p class="py-3">
-              I own and maintain a 13,600+ test suite — 10,500 pytest, 2,100 Vitest and 1,000 Playwright E2E — written test-first, with mocked unit and integration layers that never touch production, E2E validation in staging, and CI gating every push and every staging→production promotion. Before that I built a Playwright framework from zero to 700+ tests on a Netflix customer acquisition platform, cutting manual regression effort by 90%, and validated Salesforce and Cosmos DB integrations across insurance quoting systems. My toolkit spans Playwright, pytest, Vitest, Selenium, Postman with ChaiJS, GitHub Actions and Azure DevOps, plus Python, TypeScript, React/Vite, FastAPI and PostgreSQL. I build the systems as well as the tests, so my testing is informed by how software actually breaks.
+              I build and maintain a 20,100+ test suite — 14,400 pytest, 4,500 Vitest and 1,200 Playwright E2E — written test-first, with mocked unit and integration layers that never touch production, E2E validation in staging, and CI gating every push and every staging→production promotion. Before that I built a Playwright framework from zero to 700+ tests on a Netflix customer acquisition platform, cutting manual regression effort by 90%, and validated Salesforce and Cosmos DB integrations across insurance quoting systems. My toolkit spans Playwright, pytest, Vitest, Selenium, Postman with ChaiJS, GitHub Actions and Azure DevOps, plus Python, TypeScript, React/Vite, FastAPI and PostgreSQL. I build the systems as well as the tests, so my testing is informed by how software actually breaks.
             </p>
           </div>
         </div>
@@ -215,7 +215,7 @@
 
             <div class="resume-item pb-0">
               <h4>Mark Custard</h4>
-              <p><em>QA engineer with 7+ years across fintech, insurance and entertainment — including Netflix acquisition platforms and enterprise Salesforce integrations — now sole engineer of a live production booking platform built test-first behind a 13,600-test suite (pytest, Vitest, Playwright) running in CI on every push. I build the systems as well as the tests, so my testing is informed by how software actually breaks.</em></p>
+              <p><em>SDET and full-stack engineer with 7+ years in quality engineering across fintech, insurance and entertainment. Builds and runs a live booking platform end to end at TAG Parking (React, FastAPI, PostgreSQL, Stripe), backed by a 20,100+ test suite written test-first, with CI gating every push and every production promotion. I build the systems as well as the tests, so my testing is informed by how software actually breaks.</em></p>
               <ul>
                 <li>Ridgefield, Washington, 98642 &middot; Remote</li>
                 <li>(360) 771-0564</li>
@@ -252,18 +252,19 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Lead Engineer, Full Stack &amp; Quality</h4>
+              <h4>Full Stack Developer</h4>
               <h5>September 2025 - Present</h5>
               <p><em>TAG Parking, Remote</em></p>
               <ul>
-                <li>Own and maintain a 13,600+ test suite (10,500 pytest, 2,100 Vitest, 1,000 Playwright E2E) written test-first: mocked unit and integration layers that never touch production, E2E validation in staging, and CI gating every push and every staging&rarr;production promotion</li>
-                <li>Sole engineer for a production airport-parking platform (React/Vite, FastAPI, PostgreSQL, Railway) that has processed $208k in bookings across 1,700 trips for 1,800 customers &mdash; architecture, delivery, deployment and 24/7 operational ownership</li>
-                <li>Built the Stripe payment stack &mdash; PaymentElement, Apple Pay, Google Pay, Link, webhook-driven fulfilment, partial refunds &mdash; with idempotent, race-condition-free booking creation; diagnosed a mobile checkout drop-off and recovered ~$5.7k/quarter in abandoned conversions</li>
-                <li>Found and fixed a cross-night comparison defect in the occupancy engine that was silently blocking bookable weekend inventory; hardened per-night capacity limits across overnight stays with regression coverage</li>
+                <li>Build and maintain a 20,100+ test suite (14,400 pytest, 4,500 Vitest, 1,200 Playwright E2E) written test-first, with CI gating every push and every staging&rarr;production promotion &mdash; including &ldquo;census&rdquo; tests that enumerate every code path of a kind and prove each check by injecting a fault</li>
+                <li>Architect and deliver a complete booking platform (React, FastAPI, PostgreSQL) with complex data synchronisation, processing $256k in gross bookings &mdash; $223k net revenue across 2,100+ bookings &mdash; through automated financial workflows</li>
+                <li>Integrate a robust Stripe payment architecture with dynamic pricing and race-condition-free processing; contained a payment-SDK regression the same day &mdash; an estimated $4.8k in bookings at risk &mdash; with a dependency pin and a CI smoke guard</li>
+                <li>Lead full-stack development and business process automation with a comprehensive auto-roster scheduling engine, including the fix for a defect that silently undid staff edits whenever a new booking arrived &mdash; proven by 28 injected faults and two independent adversarial reviews</li>
                 <li>Engineered an automated roster and scheduling engine: template-driven shift generation, capacity-aware assignment, driver-qualification rules, overlap detection and a live operational view of each driver's run</li>
                 <li>Integrated live flight-board scraping (30-minute cadence, 3,700+ flights tracked) with automated delay detection that recalculates customer pickup times, SMS-alerts staff and reorders drivers' jobs into true operational sequence</li>
-                <li>Built competitor-aware dynamic pricing and a promotions engine driving 1,000 redemptions worth $19.9k</li>
-                <li>Shipped LLM features on the Anthropic API under adversarial security review: a customer FAQ assistant, a 2FA identity-verified booking assistant with strict data scoping, automated business reporting, and a production log sentinel that alerts only on genuine anomalies</li>
+                <li>Engineer a pricing and promotions engine &mdash; tiered and peak-day rates and a competitor-aware discount matrix &mdash; applying $26.2k in discounts across 1,000 redemptions</li>
+                <li>Build LLM features on the Anthropic API: automated business reporting, a production log sentinel, and a read-only admin analyst that answers business questions with model-written SQL under a least-privilege Postgres role</li>
+                <li>Ship a pre-registered checkout A/B experiment across iOS and Android, with sticky per-visitor assignment and a signed, timestamped analysis plan</li>
               </ul>
             </div><!-- End Resume Item -->
 
@@ -354,10 +355,30 @@
 
         </div>
 
+        <!-- Projects Row -->
+        <div class="row">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Projects</h3>
+            <div class="resume-item">
+              <h4>AI-Directed DJ Mixing System</h4>
+              <h5>2026</h5>
+              <p><em>Personal project &mdash; product owner and creative director, built with Claude Code as AI engineering partner</em></p>
+              <ul>
+                <li>Designed and directed a live-performance DJ application that beat-matches a personal library of 50+ tracks across three decks; timing is sample-accurate, with the two decks&rsquo; kicks landing about 1 ms apart in end-to-end audio tests</li>
+                <li>Integrated Claude as a real-time music director that chooses the next track, shapes each transition and layers samples using measured key, energy and harmonic fit, with an assist mode that lets the DJ pick while the AI handles the blend</li>
+                <li>Drove quality from the DJ booth: tested in live sets, reported problems by ear &mdash; off-beat blends, harmonic clashes, controls that did not match the sound &mdash; and turned each into a measured fix; an audio audit found and corrected beat grids running half a beat out in 8 of 53 tracks</li>
+                <li>Shaped the experience around how a DJ actually works: next-track suggestions that follow the chosen track, a played-track history and set playlist, a sample bank with loops, a record of loved and rejected transitions, and live updates to the AI logic mid-set without stopping the music</li>
+                <li>Ran development as Ralph-loop, test-driven iteration: every requirement became failing tests first, shown to fail against the old code, with independent adversarial reviews required to prove each bug they reported and every proof kept as a permanent regression test</li>
+                <li>Result: around 600 automated tests, plus thousands of randomised stress-test sessions against both a simulated and the real audio engine</li>
+              </ul>
+            </div><!-- End Resume Item -->
+          </div>
+        </div>
+
         <!-- Download Resume Button -->
         <div class="row mt-5" data-aos="fade-up" data-aos-delay="300">
           <div class="col-12 text-center">
-            <a href="assets/img/mark_custard_resume_09_2026.pdf" download="Mark_Custard_Resume.pdf" class="btn-download-resume">
+            <a href="assets/img/mark_custard_sdet_resume_10_2026.pdf" download="Mark_Custard_Resume.pdf" class="btn-download-resume">
               <i class="bi bi-download"></i> Download Resume (PDF)
             </a>
           </div>
@@ -398,10 +419,10 @@
                     <i class="bi bi-robot"></i>
                   </div>
                   <h3>Personal Website Automation</h3>
-                  <span class="portfolio-metric">177 tests</span>
+                  <span class="portfolio-metric">179 tests</span>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>177 Selenium tests across every section, with page objects, cross-browser CI and a nightly production run.</p>
+                  <p>179 Selenium tests across every section, with page objects, cross-browser CI and a nightly production run.</p>
                   <div class="portfolio-tags">
                     <span class="tag">Selenium</span>
                     <span class="tag">pytest</span>
@@ -424,10 +445,10 @@
                     <i class="bi bi-file-text"></i>
                   </div>
                   <h3>BDD Personal Website</h3>
-                  <span class="portfolio-metric">94 scenarios</span>
+                  <span class="portfolio-metric">95 scenarios</span>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>94 Gherkin scenarios and 314 steps in Behave, with driver lifecycle handled in environment hooks.</p>
+                  <p>95 Gherkin scenarios and 318 steps in Behave, with driver lifecycle handled in environment hooks.</p>
                   <div class="portfolio-tags">
                     <span class="tag">BDD</span>
                     <span class="tag">Gherkin</span>
@@ -450,10 +471,10 @@
                     <i class="bi bi-lightning-charge"></i>
                   </div>
                   <h3>Cypress Portfolio Tests</h3>
-                  <span class="portfolio-metric">177 tests</span>
+                  <span class="portfolio-metric">179 tests</span>
                 </div>
                 <div class="portfolio-card-body">
-                  <p>177 Cypress tests across 10 specs in about 40 seconds, with expected content kept in one fixture.</p>
+                  <p>179 Cypress tests across 10 specs in about 40 seconds, with expected content kept in one fixture.</p>
                   <div class="portfolio-tags">
                     <span class="tag">Cypress</span>
                     <span class="tag">JavaScript</span>
